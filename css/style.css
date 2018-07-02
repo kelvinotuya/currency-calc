@@ -1,3 +1,5 @@
+
+
 html{
     background: #FFA500; /* fallback for old browsers */
     background: -webkit-(#FFA500, #FFA500); /* Chrome 10-25, Safari 5.1-6 */
@@ -7,9 +9,62 @@ html{
     display:flex;
     justify-content:center;
     align-items:center;
+    font-size:100%
 }
 
-.container{background:#fff; max-width:500px; padding:20px;}
+/* Tablet Landscape */
+@media screen and (max-width: 1060px) {
+    #primary { width:67%; }
+    #secondary { width:30%; margin-left:3%;} 
+    select {
+        width: 200px;
+    } 
+}
+/* Tabled Portrait */
+@media screen and (max-width: 768px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
+    select { width: 200px;}
+    option {width: 100px;}
+}
+
+.select-wrapper {
+    background-color: #eee;
+    border: 1px solid #aaa;
+    color: #aaa;
+    cursor: pointer;
+    float: left;
+    overflow: hidden;
+    padding-right: 3em;
+    position: relative;
+    width: 100%;
+}
+
+.select {
+    -webkit-appearance: none;
+    background-color: #eee;
+    border-width: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    float: left;
+    font-size: 1em;
+    line-height: 1em;
+    padding: 1em 1em;
+    width: 100%;
+    width: calc(100% + 2em);
+    &:focus {
+        outline: none;
+    }
+}
+
+
+@media (min-width: 640px) { body {font-size:1rem;} } 
+@media (min-width:960px) { body {font-size:1.2rem;} } 
+@media (min-width:1100px) { body {font-size:1.5rem;} }
+
+.container{
+			background:#fff; max-width:500px; padding:20px;
+		 }
 
 h1{font-size:32px; text-align:center; text-transform:uppercase; color:#696969;font-weight:normal; letter-spacing:-1px;}
 p{color:#151F1F; text-align:center;} 
@@ -21,3 +76,4 @@ input[type="number"]:focus{border-color:#151F1F;}
 
 .convertButton{text-align:center; margin:10px auto 0; text-transform:uppercase; color:white; background-color:#696969; border:1px solid #696969; border-radius:3px; padding:5px 20px; cursor:pointer; transition: 0.3s background ease-in; display:block;}
 .convertButton:hover{background-color:#516395; border-color:#614385;}
+

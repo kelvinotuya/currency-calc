@@ -73,13 +73,14 @@ self.addEventListener('install', function(e) {
 		caches.open(CACHE_STATIC_NAME).then(function(cache) {
 			console.log("[ServiceWorker] Precaching App Shell");
 			return cache.addAll([
-				'index.html',
-				'js/script.js',
-				'css/style.css',
-				'js/idb.js',
-				'js/index.js',
-				'js/promise.js',
-				'js/fetch.js',
+				'./',
+				'./index.html',
+				'./js/script.js',
+				'./css/style.css',
+				'./js/idb.js',
+				'./js/index.js',
+				'./js/promise.js',
+				'./js/fetch.js',
 				'//fonts.googleapis.com/css?family=Roboto:400,700'
 			]);
 		})
